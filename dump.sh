@@ -11,7 +11,6 @@ echo "░▒▓███████▓▒░░▒▓█▓▒░░▒▓█�
 echo "                                                                                                                                                                                                                                                                        ";
 echo "                                                                                                                                                                                                                                                                        ";
 
-sudo apt-get install tcpdump -y
 mkdir /tcpdump
 cd /tcpdump
 echo "Starting tcpdump"

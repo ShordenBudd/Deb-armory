@@ -15,6 +15,8 @@ get_choice() {
     echo "Who is the target?"
     echo "I - Iptables"
     echo "T - Tcpdump"
+    echo "H - Hacker"
+    echo "X - Nobody"
     read choice
 }
 while true; do
@@ -37,6 +39,15 @@ while true; do
             echo "Killing tcpdump..."
             rm -rf /tcpdump
             break
+            ;;
+
+        H)
+            read -p "Who is the naughty hacker?" ip
+            iptables -A INPUT -s "$ip" -j DROP
+            iptables -A OUTPUT -d "$ip" -j DROP
+            ;;    
+
+        X)  break
             ;;
         *)
             echo "Invalid choice."
